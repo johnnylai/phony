@@ -470,7 +470,7 @@ Phony.define do
   # Zambia
   # http://www.wtng.info/wtng-260-zm.html
   country '260',
-    match(/^(9(55|66|7[7-9]))/) >> split(6) | # mobile
+    match(/^(9[5-7][0-9])/) >> split(6) | # mobile #FIXME: loose validation
     match(/^(21[1-8])/) >> split(6) # fixed
 
   # Madagascar http://www.wtng.info/wtng-261-mg.html
