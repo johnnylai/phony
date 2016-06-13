@@ -361,7 +361,13 @@ Phony.define do
   country '228', none >> split(4,4) # Togolese Republic http://www.wtng.info/wtng-228-tg.html
   country '229', none >> split(4,4) # Benin http://www.itu.int/oth/T0202000017/en
 
-  country '230', none >> split(4,4) # Mauritius http://www.wtng.info/wtng-230-mu.html
+  # Mauritius http://www.wtng.info/wtng-230-mu.html
+  # PATCH: +230 433 0941
+  country '230',
+    none >> matched_split(
+        /\A[4]\d+\z/ => [3,4],
+        /\A[0-3, 5-9]\d+\z/ => [4,4],
+    )
 
   # Liberia
   # https://www.numberingplans.com/?page=plans&sub=phonenr&alpha_2_input=LR
