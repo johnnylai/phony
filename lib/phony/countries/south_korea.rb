@@ -13,8 +13,8 @@ Phony.define do
   country '82',
     trunk('0') |
     match(/^(#{special.join("|")})$/) >> split(3,3) | # Special actually don't need to be split – but better err.
-    one_of('2')                       >> split(4,4) | # Seoul, also includes "services".
-    one_of(*mobile)                   >> split(3,4) |
+    one_of('2')                       >> split(3, 3..4) | # Seoul, also includes "services".
+    one_of(*mobile)                   >> split(3, 4..5) |
     fixed(2)                          >> split(4,4)   # Catchall.
 
     # See above.
