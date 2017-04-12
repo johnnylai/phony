@@ -677,7 +677,7 @@ Phony.define do
   country '359',
           trunk('0') |
           match(/^(2)/) >> split(3,2,2) | # https://en.wikipedia.org/wiki/Telephone_numbers_in_Bulgaria
-          fixed(2) >> split(3,2,2) # Bulgaria
+          fixed(2) >> split(3,3..4) # Bulgaria
 
   # Lithuania
   #
