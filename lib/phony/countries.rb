@@ -1152,7 +1152,7 @@ Phony.define do
           one_of(%w(92 97)) >> split(3) | # mobile
           fixed(2) >> split(3,3)
 
-  country '975', fixed(1) >> split(3, 3) # Bhutan (Kingdom of) http://www.wtng.info/wtng-975-bt.html
+  country '975', fixed(1) >> split(3, 3..4) # Bhutan (Kingdom of) http://www.wtng.info/wtng-975-bt.html
 
   # Mongolia
   # https://www.numberingplans.com/?page=plans&sub=phonenr&alpha_2_input=MN
