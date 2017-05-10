@@ -882,7 +882,7 @@ Phony.define do
           one_of('115') >> split(4,4) | # voicemail (mobile)
           one_of(%w(28 29)) >> split(3,2) | # pager
           one_of(%w(16 18)) >> split(3,2) | # ISP
-          one_of(%w(71 72 73 76)) >> split(3,3) | # mobile
+          one_of(%w(71 72 73 75 76)) >> split(3,3) | # mobile
           one_of(%w(80 81 82 83)) >> split(3,3) | # freephone
           one_of(%w(90 91 92 93)) >> split(3,3) | # geographic, ISDN
           one_of(%w(3 4 5 6 7 8 9)) >> split(3,3) # geographic
